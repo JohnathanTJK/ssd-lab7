@@ -8,12 +8,12 @@ const environment = process.argv[2] || 'local';
 // Obtain dev selenium server IP using: docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' selenium-server
 const seleniumUrl = environment === 'github' 
   ? 'http://selenium:4444/wd/hub' 
-  : 'http://localhost:4444/wd/hub';
+  : 'http://172.20.160.1:4444/wd/hub';
 
 // Note: Start the nodejs server before running the test locally
 const serverUrl = environment === 'github' 
   ? 'http://testserver:3000' 
-  : 'http://localhost:3000';
+  : 'http://172.20.160.1:3000';
 
 console.log(`Running tests in '${environment}' environment`);
 console.log(`Selenium URL: ${seleniumUrl}`);
