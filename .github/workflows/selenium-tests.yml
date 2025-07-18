@@ -3,7 +3,7 @@ name: Node.js Selenium Testing
 on:
   push:
     branches:
-      - main 
+      - main
   pull_request:
     branches:
       - main
